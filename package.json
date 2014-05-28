@@ -4,7 +4,7 @@
   "keywords": [
     "seattle"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "seattle.js",
   "bin": {
     "seattle": "seattle.js"
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "chug": "0.1.19",
-    "shellify": "0.0.1"
+    "shellify": "0.0.2"
   },
   "devDependencies": {
     "zeriousify": "0.1.4",

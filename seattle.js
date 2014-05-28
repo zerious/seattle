@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var api = module.exports;
 var shellify = require('shellify');
 
