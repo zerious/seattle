@@ -4,6 +4,7 @@ var log = require('shellify').logger;
 module.exports = function (config, input) {
   chug(process.cwd())
     .ignore('.git')
+    .ignore('coverage')
     .ignore('node_modules')
     .each(function (asset) {
       if (typeof asset.content == 'string') {
