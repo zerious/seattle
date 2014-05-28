@@ -6,14 +6,16 @@ module.exports = function (config, input) {
     .ignore('.git')
     .ignore('node_modules')
     .each(function (asset) {
-      var clean = asset.content
-        .replace(/\t/g, '  ')
-        .replace(/\r/g, '')
-        .replace(/ +\n/g, '\n');
-      if (clean != asset.content) {
-        asset.content = clean;
-        asset.write();
-        log('Fixed spacing in "' + asset.location + '"');
+      if (typeof asset.content == 'string') {
+        var clean = asset.content
+          .replace(/\t/g, '  ')
+          .replace(/\r/g, '')
+          .replace(/ +\n/g, '\n');
+        if (clean != asset.content) {
+          asset.content = clean;
+          asset.write();
+          log('Fixed spacing in "' + asset.location + '"');
+        }
       }
     });
 };
